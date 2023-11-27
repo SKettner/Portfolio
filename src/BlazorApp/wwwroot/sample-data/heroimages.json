@@ -1,8 +1,8 @@
 [
   {
     "name": "home",
-    "src": "images/woman-with-tablet.jpg",
-    "alt": "woman with glasses holding a tablet"
+    "src": "images/my-image.jpg",
+    "alt": "me in a suit"
   },
   {
     "name": "about",
@@ -11,7 +11,12 @@
   },
   {
     "name": "portfolio",
-    "src": "images/design-desk.jpeg",
+    "src": "images/design-desk.jpg",
     "alt": "desktop with books and laptop"
+  },
+  {
+    "name": "resume",
+    "src": "images/Resume.jpg",
+    "alt": "Sherman Kettner Resume"
   }
 ]

@@ -1,0 +1,10 @@
+@page "/innovationstatment"
+@inject HttpClient Http
+@inject HeroImageService HeroImageService
+
+<PageTitle>Portfolio</PageTitle>
+
+<Header />
+<InnovationStatementMain Http=@Http HeroImageService=@HeroImageService />
+<Footer Http=@Http PrimaryColor="#4E567E" SecondaryColor="#D2F1E4" />
+

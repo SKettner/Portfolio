@@ -15,6 +15,30 @@
             }
         </div>
         <div class="container">
+            <h3>Career</h3>
+            <h3></h3>
+            @foreach (var career in careers)
+            {
+                <div class="box" key="@career.Title">
+                    <a href="@career.Url" target="_blank" rel="noopener noreferrer">
+                        <h3 style="flex-basis: 40px;">@career.Title</h3>
+                    </a>
+                    <p class="small">@career.Description</p>
+                </div>
+            }
+            <h3>Writing Sample</h3>
+            <h3></h3>
+            @foreach (var writingSample in writingSamples)
+            {
+                <div class="box" key="@writingSample.Title">
+                    <a href="@writingSample.Url" target="_blank" rel="noopener noreferrer">
+                        <h3 style="flex-basis: 40px;">@writingSample.Title</h3>
+                    </a>
+                    <p class="small">@writingSample.Description</p>
+                </div>
+            }
+            <h3>Projects</h3>
+            <h3></h3>
             @foreach (var project in projects)
             {
                 <div class="box" key="@project.Title">
@@ -37,10 +61,14 @@
     public required HeroImageService HeroImageService { get; set; }
 
     private List<Project>? projects;
+    private List<Project>? careers;
+    private List<Project>? writingSamples;
     private HeroImage? hero;
 
     protected override async Task OnInitializedAsync()
     {
+        careers = await Http.GetFromJsonAsync<List<Project>>("sample-data/career.json");
+        writingSamples = await Http.GetFromJsonAsync<List<Project>>("sample-data/writingSample.json");
         projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
     }
