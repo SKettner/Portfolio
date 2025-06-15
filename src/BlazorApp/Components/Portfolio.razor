@@ -1,53 +1,69 @@
-<section class="light" id="portfolio">
+@page "/portfolio"
+<div class="portfolio-divider"></div>
+<section class="portfolio-section" id="portfolio">
     <h2>Portfolio</h2>
-    <div class="portfolio-container">
-    @if (projects is null)
+    <div class="portfolio-wrapper">
+
+    @if (careers is null)
     {
         <p><em>Loading...</em></p>
     }
     else
     {
-        <div class="portfolio-hero">
-            @if (hero is not null)
-            {
-                <img src="@(hero.Src)" style="height: 90%; width: 100%; object-fit: cover;" 
-                    alt="@(hero.Alt)" />
-            }
-        </div>
-        <div class="container">
-            <h3>Career</h3>
-            <h3></h3>
-            @foreach (var career in careers)
-            {
-                <div class="box" key="@career.Title">
-                    <a href="@career.Url" target="_blank" rel="noopener noreferrer">
-                        <h3 style="flex-basis: 40px;">@career.Title</h3>
-                    </a>
-                    <p class="small">@career.Description</p>
+        <div class="portfolio-grid">
+            <div class="grid-hero">
+                <img src="images/design-desk.jpg" alt="Laptop image" />
+            </div>
+
+            <div class="grid-content1">
+                <div class="section-group">
+                <h3>Career</h3>
+                @foreach (var career in careers)
+                {
+                    <div class="box">
+                        <a href="@career.Url" target="_blank"><strong>@career.Title</strong></a>
+                        <p>@career.Description</p>
+                    </div>
+                }
                 </div>
-            }
-            <h3>Writing Sample</h3>
-            <h3></h3>
-            @foreach (var writingSample in writingSamples)
-            {
-                <div class="box" key="@writingSample.Title">
-                    <a href="@writingSample.Url" target="_blank" rel="noopener noreferrer">
-                        <h3 style="flex-basis: 40px;">@writingSample.Title</h3>
-                    </a>
-                    <p class="small">@writingSample.Description</p>
+                <div class="section-group">
+                <h3>Writing Samples</h3>
+                @foreach (var writingSample in writingSamples)
+                {
+                    <div class="box">
+                        <a href="@writingSample.Url" target="_blank"><strong>@writingSample.Title</strong></a>
+                        <p>@writingSample.Description</p>
+                    </div>
+                }
                 </div>
-            }
-            <h3>Projects</h3>
-            <h3></h3>
-            @foreach (var project in projects)
-            {
-                <div class="box" key="@project.Title">
-                    <a href="@project.Url" target="_blank" rel="noopener noreferrer">
-                        <h3 style="flex-basis: 40px;">@project.Title</h3>
-                    </a>
-                    <p class="small">@project.Description</p>
+            </div>
+
+            <div class="grid-content2">
+                <div class="section-group">
+                <h3>Projects</h3>
+                @foreach (var project in projects)
+                {
+                    <div class="box">
+                        <a href="@project.Url" target="_blank"><strong>@project.Title</strong></a>
+                        <p>@project.Description</p>
+                    </div>
+                }
                 </div>
-            }
+                <div class="section-group">
+                <h3>Papers</h3>
+                @foreach (var paper in papers)
+                {
+                    <div class="box">
+                        <a href="@paper.Url" target="_blank"><strong>@paper.Title</strong></a>
+                        <p>@paper.Description</p>
+                    </div>
+                }
+                </div>
+            </div>
+
+            <div class="grid-image2">
+                <img src="images/open-book.png" alt="Academic paper image" />
+            </div>
         </div>
     }
     </div>
@@ -63,13 +79,15 @@
     private List<Project>? projects;
     private List<Project>? careers;
     private List<Project>? writingSamples;
+    private List<Project>? papers;
     private HeroImage? hero;
 
     protected override async Task OnInitializedAsync()
     {
         careers = await Http.GetFromJsonAsync<List<Project>>("sample-data/career.json");
         writingSamples = await Http.GetFromJsonAsync<List<Project>>("sample-data/writingSample.json");
-        projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
+        projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects2.json");
+        papers = await Http.GetFromJsonAsync<List<Project>>("sample-data/papers.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
     }
 }

@@ -1,0 +1,14 @@
+.about-skill-list {
+    column-count: 2;
+    column-gap: 3rem;
+    text-align: left;
+    font-size: 1.25rem;
+    margin: 2rem 3rem;
+}
+
+@media (max-width: 948px) {
+    .about-skill-list {
+        column-count: 1;
+        margin: 2rem 1rem;
+    }
+}

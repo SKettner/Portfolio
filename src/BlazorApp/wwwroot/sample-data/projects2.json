@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Portfolio Website",
+    "description": "This is the source code I updated/modified for this website.",
+    "url": "https://github.com/SKettner/Portfolio"
+  },
+  {
+    "title": "Code 3 Website",
+    "description": "The final report for a team I lead in updating Code 3 Christmas Lights website and Marketing material.",
+    "url": "pdf/Code3Web2023FinalReport.pdf"
+  },
+  {
+    "title": "AI Assistant and Memory Project",
+    "description": "A paper reviewing a project to prototype an AI assistant and novel AI memory system for AR smart glasses.",
+    "url": "pdf/AI_Assistant_and_Memory_Project.pdf"
+  },
+  {
+    "title": "Using Genetic Algorithms to Find Roots",
+    "description": "A paper exploring the use of a genetic algorithm to find function roots.",
+    "url": "pdf/Using_Genetic_Algorithms_to_Find_Roots.pdf"
+  }
+]

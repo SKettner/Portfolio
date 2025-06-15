@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Characterizing Cyberattacks against Operational Technology Infrastructures through the Lens of Attack Flows",
+    "description": "A paper characterizing four OT cyberattacks, published in Military Cyber Affairs.",
+    "url": "pdf/Characterizing_Cyberattacks_against_Operational_Technology.pdf"
+  },
+  {
+    "title": "Visual AI Players for the Game of Go",
+    "description": "A paper providing an overview of a semester project focused on playing the game of Go using a visual AI agent.",
+    "url": "pdf/Visual_AI_Players.pdf"
+  },
+  {
+    "title": "Multi-Agent Reinforcement Learning",
+    "description": "A paper providing an review of what I learned in a study of Multi-Agent Reinforcement Learning.",
+    "url": "pdf/Multi-Agent_Reinforcement_Learning.pdf"
+  }
+]

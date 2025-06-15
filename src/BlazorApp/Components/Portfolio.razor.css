@@ -1,0 +1,153 @@
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-areas:
+        "hero content1"
+        "content2 image2";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 2rem;
+}
+
+.grid-hero {
+    grid-area: hero;
+}
+
+.grid-content1 {
+    grid-area: content1;
+}
+
+.grid-content2 {
+    grid-area: content2;
+}
+
+.grid-image2 {
+    grid-area: image2;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+    .box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .box a {
+        display: block;
+        font-weight: 600;
+        color: #1a1a1a;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .box a:hover {
+        color: #0056cc;
+        text-decoration: underline;
+    }
+
+    .box p {
+        font-size: 0.95rem;
+        color: #444;
+        margin-top: 0.5rem;
+    }
+
+h3 {
+    margin: 2rem 0 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.3rem;
+}
+
+.section-group {
+    background: #f3f4f6; /* light neutral gray */
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-bottom: 2rem;
+}
+
+
+@media (max-width: 1684px) {
+    .portfolio-grid {
+        grid-template-areas:
+            "hero"
+            "content1"
+            "content2"
+            "image2";
+        grid-template-columns: 1fr;
+    }
+
+        .portfolio-grid img {
+            max-height: unset;
+        }
+}
+
+.portfolio-grid,
+.box,
+img {
+    transition: all 0.3s ease-in-out;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.box a {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.portfolio-section {
+    background-image: url('/images/motion-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-color: #f9f9f9; /* fallback */
+}
+
+.portfolio-wrapper {
+    background-color: white;
+    width: 50%;
+    padding: 4rem;
+    margin: 3rem auto;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.portfolio-divider {
+    height: 2px;
+    border: none;
+    margin: 2rem 0;
+    background: linear-gradient(to right, transparent, #333, transparent);
+}
+
