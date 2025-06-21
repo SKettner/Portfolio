@@ -12,3 +12,31 @@
         margin: 2rem 1rem;
     }
 }
+
+.about-container {
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        padding: 4rem;
+        width: 60%;
+    }
+}
+
+.large {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .large {
+        font-size: 1.3rem;
+    }
+}
+
