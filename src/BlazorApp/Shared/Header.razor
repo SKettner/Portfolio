@@ -40,39 +40,12 @@
             flex-wrap: wrap;
         }
 
-        @@media screen and (min-width: 601px) {
-            .nav-links
-
-        {
-            flex-direction: row;
-            justify-content: flex-start;
-        }
-
-        .nav-links a {
-            display: block;
-        }
-
-        .menu-icon {
-            display: none;
-        }
-
-        }
-
         @@media screen and (max-width: 600px) {
-            .nav-links
+            #header a
 
         {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .nav-links.show {
-            display: flex;
-        }
-
-        .menu-icon {
-            display: block;
+            font-size: 0.8rem; /* Smaller font for phones */
+            padding: 10px 12px; /* Slightly tighter padding too */
         }
 
         }
